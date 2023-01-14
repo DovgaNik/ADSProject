@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 		}
 	}
 	// Ask for employee and day amount input
-	cout << "Two dim arr" << endl << "Please enter the amount of employees and days: ";
+	std::cout << "Project: Two-dimensional array." << std::endl << "Description: This algorithm will randomly generate a user-defined amount of numbers and defines the smallest and biggest number." << std::endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << std::endl << std::endl << "Please enter the amount of employees and days: ";
 	cin >> amountOfEmployees >> amountOfDays;
 
 	// Dynamically creating a 2d array in the heap

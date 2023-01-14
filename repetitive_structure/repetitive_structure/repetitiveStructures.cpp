@@ -1,4 +1,7 @@
 #include <iostream>
+#include <time.h> // Required to create a seed for random number generator
+
+using namespace std;
 
 int main() {
 
@@ -10,21 +13,24 @@ int main() {
 		min,
 		max;
 
-	std::cout << "Project: Repetitive strucutues." << std::endl << "Description: This algorithm will randomly generate a user-defined amount of numbers and defines the smallest and biggest number. ONLY POSITIVE NUMBERS ALLOWED, NEGATIVE NUMBERS LEAD TO UNEXPECTED BEHAVIOR" << std::endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << std::endl << std::endl << "Please enter the amount of number you want to generate and go through: ";
-	std::cin >> amountOfNumbers;
-	std::cout << "Please enter the minimal number and maximal number for random number generator: ";
-	std::cin >> minRandom >> maxRandom;
+	cout << "Project: Repetitive strucutues." << endl << "Description: This algorithm will randomly generate a user-defined amount of numbers and defines the smallest and biggest number." << endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << endl << endl << "Please enter the amount of number you want to generate and go through (only positive numbers): ";
+	
+	do {
 
+		cin >> amountOfNumbers;
+		cout << "Please enter the minimal number and maximal number for random number generator: ";
+		cin >> minRandom >> maxRandom;
+
+	} while (!amountOfNumbers > 0 && !minRandom > 0 && !amountOfNumbers > 0);
+	
 	srand((unsigned)time(NULL));
 
 	min = (rand() % maxRandom) + minRandom;
 	max = min;
-	//std::cout << min << std::endl;
 
 	for (int i = 1; i < amountOfNumbers; i++) {
 
 		int number = (rand() % maxRandom) + minRandom;
-		//std::cout << number << std::endl;
 
 		if (max < number) {
 
@@ -49,10 +55,10 @@ int main() {
 		}
 	}
 
-	std::cout << "The minimal number- " << min << " occured " << minOccurance << " times." << std::endl << "The maximal number- " << max << " occured " << maxOccurance << " times." << std::endl;
+	cout << "The minimal number- " << min << " occured " << minOccurance << " times." << endl << "The maximal number- " << max << " occured " << maxOccurance << " times." << endl;
 
-	std::cin.ignore();
-	std::cin.get();
+	cin.ignore();
+	cin.get();
 	return 0;
 
 }
