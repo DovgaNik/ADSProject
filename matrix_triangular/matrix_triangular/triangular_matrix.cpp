@@ -2,7 +2,24 @@
 
 using namespace std;
 
+void intro() {
+
+	cout << "Project: Repetitive structures 2." << endl << "Description: This algorithm will ask you to input a matrix of numbers, the size is specified by the user, check if it is upper or lower diagonal, check if it is just diagonal, ask user to swap any 2 rows, and find the maxima and minima of the matrix." << endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro dovgan.nik.2005@gmail.com" << endl;
+
+}
+
+void finish() {
+
+	cout << "Press enter to finish execution...";
+	cin.ignore();
+	cin.get();
+	exit(0);
+
+}
+
 int main() {
+
+	intro();
 
 	// Input the size of matrix
 	cout << "Please specify the size of the matrix: ";
@@ -17,7 +34,7 @@ int main() {
 	cout << "Please input the data:" << endl;
 	for (int i = 0; i < size; i++)
 		for (int j = 0; j < size; j++) {
-	
+
 			//cout << "Please, enter the data for the position (" << i + 1 << ";" << j + 1 << "): " << endl;
 			cin >> arr[i][j];
 
@@ -37,7 +54,7 @@ int main() {
 
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			
+
 			if (i > j && arr[i][j] != 0)
 				isLowerTriangular = false;
 
@@ -82,11 +99,11 @@ int main() {
 		{
 
 			if (min > arr[i][j]) {
-			
+
 				min = arr[i][j];
 				minX = i;
 				minY = j;
-			
+
 			}
 			if (max < arr[i][j])
 			{
@@ -113,8 +130,6 @@ int main() {
 		cout << "|" << endl;
 	}
 
-	cin.ignore();
-	cin.get();
-	return 0;
+	finish();
 
 }
