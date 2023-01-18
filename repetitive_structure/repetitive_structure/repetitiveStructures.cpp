@@ -19,6 +19,8 @@ void finish() {
 
 int main() {
 
+	intro();
+
 	unsigned int amountOfNumbers,
 		minRandom,
 		maxRandom,
