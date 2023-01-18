@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 		}
 	}
 	// Ask for employee and day amount input
-	std::cout << "Project: Two-dimensional array." << std::endl << "Description: This algorithm will randomly generate a user-defined amount of numbers and defines the smallest and biggest number." << std::endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << std::endl << std::endl << "Please enter the amount of employees and days: ";
+	std::cout << "Project: Two-dimensional array." << std::endl << "Description: This algorithm will go through a specified amount of employees and either ask for input or make up random numbers." << std::endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << std::endl << std::endl << "Please enter the amount of employees and days: ";
 	cin >> amountOfEmployees >> amountOfDays;
 
 	// Dynamically creating a 2d array in the heap
@@ -64,15 +64,17 @@ int main(int argc, char** argv) {
 
 	cout << endl << endl;
 
-	for (int j = 0; j < amountOfDays; j++) {
-		for (int i = 0; i < amountOfEmployees; i++) {
+	if (displayTable) {
+		for (int j = 0; j < amountOfDays; j++) {
+			for (int i = 0; i < amountOfEmployees; i++) {
 
-			cout << "|" << a[j][i] << "|";
+				cout << "|" << a[j][i] << "|";
+
+			}
+
+			cout << endl;
 
 		}
-
-		cout << endl;
-
 	}
 
 	cout << "Do you want to calculate total amount for an employee (E) or a day (D) or an employee that worked the most (M)" << endl;
