@@ -1,6 +1,24 @@
 #include <iostream>
 
+using namespace std;
+
+void intro() {
+
+	std::cout << "Project: One-dimensional array." << std::endl << "Description: This algorithm will randomly generate a user-defined amount of numbers to an array, sorts them and show statistic for every number occured." << std::endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << std::endl << std::endl; // Intro
+
+}
+
+void finish() {
+
+	cout << "Press enter to finish execution...";
+	cin.get();
+	exit(0);
+
+}
+
 int main() {
+
+	intro();
 
 	// Variable declaration
 	double 
@@ -10,8 +28,6 @@ int main() {
 		minRandom, // The lower limit for random number generator
 		maxRandom; // The higher limit for random number generator
 	// Variable declaration
-
-	std::cout << "Project: One-dimensional array." << std::endl << "Description: This algorithm will randomly generate a user-defined amount of numbers to an array, sorts them and show statistic for every number occured." << std::endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << std::endl << std::endl; // Intro
 	
 	do {
 
@@ -66,8 +82,6 @@ int main() {
 	delete arr;
 	arr = NULL;
 
-	std::cin.ignore();
-	std::cin.get();
-	return 0;
+	finish();
 
 }

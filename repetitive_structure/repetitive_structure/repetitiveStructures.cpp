@@ -3,6 +3,20 @@
 
 using namespace std;
 
+void intro() {
+
+	cout << "Project: Repetitive strucutues." << endl << "Description: This algorithm will randomly generate a user-defined amount of numbers and defines the smallest and biggest number." << endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << endl << endl << "Please enter the amount of number you want to generate and go through (only positive numbers): ";
+
+}
+
+void finish() {
+
+	cout << "Press enter to finish execution...";
+	cin.get();
+	exit(0);
+
+}
+
 int main() {
 
 	unsigned int amountOfNumbers,
@@ -12,8 +26,6 @@ int main() {
 		minOccurance = 1,
 		min,
 		max;
-
-	cout << "Project: Repetitive strucutues." << endl << "Description: This algorithm will randomly generate a user-defined amount of numbers and defines the smallest and biggest number." << endl << "Made by Nikita DOVHAN dovhan.o.nikita22@stud.rau.ro" << endl << endl << "Please enter the amount of number you want to generate and go through (only positive numbers): ";
 	
 	do {
 
@@ -57,8 +69,6 @@ int main() {
 
 	cout << "The minimal number- " << min << " occured " << minOccurance << " times." << endl << "The maximal number- " << max << " occured " << maxOccurance << " times." << endl;
 
-	cin.ignore();
-	cin.get();
-	return 0;
+	finish();
 
 }
